@@ -1,0 +1,31 @@
+<form>
+    <br />
+    <div class="w3-container">
+        <div class="w3-card">
+            <div class="w3-container">
+
+                <img style="max-width: 100%;" src="assets/img/ninaLogo.jpg" class="w3-padding" alt="Alps">
+                <br />
+                <br />
+                <div *ngIf='errorMesage!=null' class="w3-card w3-pale-red">
+                    <p>{{errorMesage}}</p>
+                </div>
+                <label>Correo:</label>
+                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="correo" class="w3-input" type="text">
+
+                <label>Contraseña:</label>
+                <input [ngModelOptions]="{standalone: true}" [(ngModel)]="contrasenia" class="w3-input" type="password">
+                <br />
+                <br />
+                <button (click)='ingresar();' style="width: 100%;"
+                    class="w3-btn w3-blue-grey w3-round">Ingresar</button>
+                <br />
+                <br />
+                <button [routerLink]="['/registroForm']" style="width: 100%;"
+                    class="w3-btn w3-blue-grey w3-round">Registrar</button>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</form>

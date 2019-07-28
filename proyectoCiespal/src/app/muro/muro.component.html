@@ -1,0 +1,47 @@
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <button (click)='cerrarSesion();' class="w3-bar-item w3-button">Cerrar Sesión</button>
+</div>
+<header class="w3-blue-grey">
+    <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+    <h6 style="display: inline;">Nina App</h6>
+</header>
+<button [routerLink]="['/subidaForm']" class="botonSubir w3-btn w3-teal w3-round-xxlarge"><i class="fa fa-upload" aria-hidden="true"></i>
+</button>
+<div class="w3-container" style="background: #f0f0f0;">
+    <br />
+    <label>Etnia:</label>
+    <select class="w3-select" name="option" [(ngModel)]="seleccion">
+        <option value="" disabled selected> - Seleccione - </option>
+        <option value="1">Pueblo Manta</option>
+        <option value="2">Pueblo Huancavilca</option>
+        <option value="3">Pueblo Montubio</option>
+        <option value="3">Nacionalidad Guaorani</option>
+        <option value="3">Nacionalidad Secoya</option>
+        <option value="3">Nacionalidad Cofán</option>
+    </select>
+    <br />
+    <div>
+        <div *ngFor="let h of publicaciones" class="w3-card" style="background: #ffffff;">
+            <h6>{{h.documento_nombre}}</h6>
+            <br />
+            <img *ngIf='h.documento_tipo=="img"' style="max-width: 100%;"
+                src="https://www.corape.org.ec:443/centrodedocumentacion/media/docs/{{h.documento_url}}"
+                class="w3-padding" alt="{{h.documento_url}}">
+
+            <div *ngIf='h.documento_tipo=="audio"'>
+
+                <audio controls>
+                    <source src="https://www.corape.org.ec:443/centrodedocumentacion/media/docs/{{h.documento_url}}"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <br />
+            <div [innerHtml]="h.documento_descripcion"></div>
+        </div>
+
+
+    </div>
+
+</div>

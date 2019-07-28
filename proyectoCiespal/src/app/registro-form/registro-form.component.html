@@ -1,0 +1,29 @@
+<form>
+    <header class="w3-container w3-blue-grey">
+        <h6>Nina App</h6>
+    </header>
+    <div class="w3-container">
+        <h3>Registro</h3>
+        <label>Nombre:</label>
+        <input class="w3-input" type="text">
+        <label>Nacionalidad:</label>
+        <select class="w3-select" name="option">
+            <option value="" disabled selected> - Seleccione - </option>
+            <option value="1">Pueblo Manta</option>
+            <option value="2">Pueblo Huancavilca</option>
+            <option value="3">Pueblo Montubio</option>
+            <option value="3">Nacionalidad Guaorani</option>
+            <option value="3">Nacionalidad Secoya</option>
+            <option value="3">Nacionalidad Cofán</option>
+        </select>
+        <label>Correo:</label>
+        <input class="w3-input" type="text">
+        <label>Contraseña:</label>
+        <input class="w3-input" type="password">
+        <br />
+        <br />
+        <button (click)='registrarse();' style="width: 100%;" class="w3-btn w3-blue-grey w3-round">Registrar</button>
+        <br />
+        <br />
+    </div>
+</form>

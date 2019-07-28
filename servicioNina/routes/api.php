@@ -17,6 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('docentes/{id}', function ($id){
-    return $id;
-});
+Route::resource('documentos', 'DocenteController');

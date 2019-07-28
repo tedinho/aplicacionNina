@@ -1,0 +1,48 @@
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <button (click)='cerrarSesion();' class="w3-bar-item w3-button">Cerrar Sesión</button>
+</div>
+<header class="w3-blue-grey">
+    <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+    <h6 style="display: inline;">Nina App</h6>
+</header>
+<div class="w3-container">
+    <h3>Subir Archivo</h3>
+    <label>Título:</label>
+    <input class="w3-input" type="text">
+    <label>Alias:</label>
+    <input class="w3-input" type="text">
+    <label>Categoría:</label>
+    <select class="w3-select" name="option">
+        <option value="" disabled selected> - Seleccione - </option>
+        <option value="1">Corape Biblioteca</option>
+    </select>
+    <label>Nacionalidad:</label>
+    <select class="w3-select" name="option">
+        <option value="" disabled selected> - Seleccione - </option>
+        <option value="1">Pueblo Manta</option>
+        <option value="2">Pueblo Huancavilca</option>
+        <option value="3">Pueblo Montubio</option>
+        <option value="3">Nacionalidad Guaorani</option>
+        <option value="3">Nacionalidad Secoya</option>
+        <option value="3">Nacionalidad Cofán</option>
+    </select>
+    <label>Detalle:</label>
+    <br />
+    <textarea></textarea>
+    <br />
+    <label>Subir Archivo:</label>
+
+    <br />
+    <button class="w3-center botonSubir w3-btn w3-teal w3-round-xxlarge"><i class="fa fa-upload" aria-hidden="true">
+            Subir</i></button>
+
+    <br />
+    <br />
+    <button style="width: 100%" [routerLink]="['/muro']" class="botonSubir w3-btn w3-teal"><i class="fa fa-upload"
+            aria-hidden="true">
+            Guardar</i></button>
+    <br />
+    <br />
+
+</div>
